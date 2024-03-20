@@ -1,1 +1,75 @@
+# All commands used to prepare for start of project
+kboyl@Kelsey MINGW64 ~
+$ pwd
+/c/Users/kboyl
+
+kboyl@Kelsey MINGW64 ~
+$ ls
+Projects/
+
+kboyl@Kelsey MINGW64 ~
+$ cd Projects
+
+kboyl@Kelsey MINGW64 ~/Projects
+$ ls
+
+kboyl@Kelsey MINGW64 ~/Projects
+
+kboyl@Kelsey MINGW64 ~/Projects
+$ mkdir CloudUploader
+
+kboyl@Kelsey MINGW64 ~/Projects
+$ ls
+CloudUploader/
+
+kboyl@Kelsey MINGW64 ~/Projects
+$ cd CloudUploader
+
+kboyl@Kelsey MINGW64 ~/Projects
+$ mkdir GITCODE
+
+kboyl@Kelsey MINGW64 ~/Projects
+$ ls
+CloudUploader/  GITCODE/
+
+kboyl@Kelsey MINGW64 ~/Projects
+$ rm -r GITCODE
+
+kboyl@Kelsey MINGW64 ~/Projects
+$ ls
+CloudUploader/
+
+kboyl@Kelsey MINGW64 ~/Projects
+$ cd CloudUploader
+
+kboyl@Kelsey MINGW64 ~/Projects/CloudUploader
+$ mkdir GITCODE
+
+kboyl@Kelsey MINGW64 ~/Projects/CloudUploader
+$ ls
+GITCODE/
+
+kboyl@Kelsey MINGW64 ~/Projects/CloudUploader
+$ cd GITCODE
+
+kboyl@Kelsey MINGW64 ~/Projects/CloudUploader/GITCODE
+$ git clone https://github.com/.....
+Cloning into 'CloudUploader'...
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (7/7), done.
+Receiving objects: 100% (11/11), done.
+remote: Total 11 (delta 0), reused 0 (delta 0), pack-reused 0
+
+kboyl@Kelsey MINGW64 ~/Projects/CloudUploader/GITCODE
+$ ls
+CloudUploader/
+
+kboyl@Kelsey MINGW64 ~/Projects/CloudUploader/GITCODE
+$ cd CloudUploader
+
+kboyl@Kelsey MINGW64 ~/Projects/CloudUploader/GITCODE/CloudUploader (main)
+$ ls
+Project_Code  README.md
+
 
