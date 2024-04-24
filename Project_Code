@@ -25,3 +25,72 @@ CloudUploader/
 kboyl@Kelsey MINGW64 ~/Projects
 $ cd CloudUploader
 
+
+##new approach. Created file in usr folder.
+
+
+PS kboyl> cd static_web
+PS kboyl\static_web> ls
+
+
+    Directory: static_web
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+da----         3/23/2024   6:25 AM                assets
+-a----         3/13/2024  11:56 AM          22814 index.html
+-a----         3/20/2024  12:06 PM          22814 kbstatic.html
+-a----         3/12/2024   9:30 AM            859 readme.txt
+
+
+kboyl\static_web> aws s3 cp ~/static_web/kbstatic.html s3://static_web/kbstatic.html
+
+The user-provided path ~/static_web/kbstatic.html does not exist.
+PS kboyl\static_web> cd ..
+PS kboyl> aws s3 cp ~/static_web/kbstatic.html s3://static_web/kbstatic.html
+
+The user-provided path ~/static_web/kbstatic.html does not exist.
+PS kboyl> aws s3 cp ~"C:\Users\kboyl\static_web\kbstatic.html" s3://"C:\Users\kboyl\static_web\kbstatic.html"
+
+The user-provided path ~C:\Users\kboyl\static_web\kbstatic.html does not exist.
+PS kboyl> aws s3 cp ~\Users\kboyl\static_web\kbstatic.html s3://Users\kboyl\static_web\kbstatic.html
+
+The user-provided path ~\Users\kboyl\static_web\kbstatic.html does not exist.
+PS kboyl> aws s3 cp ~/Users/kboyl/static_web/kbstatic.html s3://Users\kboyl/static_web/kbstatic.html
+
+The user-provided path ~/Users/kboyl/static_web/kbstatic.html does not exist.
+PS kboyl> aws s3 ls
+2024-04-23 11:15:26 kbcloudproject
+2024-03-11 10:01:27 kblabbucket
+
+
+PS kboyl> aws s3 ls kblabbucket
+                           PRE Static Website/
+                           PRE images/
+PS kboyl> aws s3 ls kblabbucket images/
+
+Unknown options: images/
+PS kboyl> aws s3 ls kblabbucket PRE images/
+
+Unknown options: PRE,images/
+PS kboyl> aws s3 ls kblabbucket --images
+
+Unknown options: --images
+PS kboyl> aws s3 ls kblabbucket images
+
+Unknown options: images
+PS kboyl> aws s3 ls images kblabbucket
+
+Unknown options: kblabbucket
+PS kboyl> aws s3 ls --bucket kblabbucket --key images
+
+Unknown options: --bucket,--key,images
+PS kboyl> aws s3 cp ~static_web/kbstatic.html s3://kbcloudproject/static_web/kbstatic.html
+
+The user-provided path ~static_web/kbstatic.html does not exist.
+PS kboyl> aws s3 cp /static_web/kbstatic.html s3://kbcloudproject/static_web/kbstatic.html
+
+The user-provided path /static_web/kbstatic.html does not exist.
+PS kboyl> aws s3 cp static_web/kbstatic.html s3://kbcloudproject/static_web/kbstatic.html
+upload: static_web\kbstatic.html to s3://kbcloudproject/static_web/kbstatic.html
